@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecteur de musique</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mon lecteur de musique</h1>
+    </header>
+
+    <main class="playlist">
+      <section class="details">
+        <audio id="audio"></audio>
+        <img class="track-art" />
+        <h2 class="track-name"></h2>
+        <h3 class="track-artist"></h3>
+      </section>
+
+      <section class="slider__container">
+        <div class="current-time"></div>
+        <input type="range" min="1" max="100" value="0" class="seek__slider" />
+        <div class="total-duration"></div>
+      </section>
+
+      <section class="slider__container">
+        <i class="fa fa-volume-down"></i>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="99"
+          class="volume__slider"
+        />
+      </section>
+
+      <section class="buttons">
+        <button class="prev-track">
+          <i class="fa fa-step-backward fa-2x"></i>
+        </button>
+        <button class="playpause-track">
+          <i class="fa fa-play-circle fa-5x"></i>
+        </button>
+        <button class="next-track">
+          <i class="fa fa-step-forward fa-2x"></i>
+        </button>
+      </section>
+
+      <section id="wave">
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+      </section>
+    </main>
+    <footer>
+      <span>Site créé par aperbet56</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

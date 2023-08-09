@@ -1,0 +1,284 @@
+/**** Reset ****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+/**** Style général de la page ****/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+    0deg,
+    rgba(247, 247, 247, 1) 23.8%,
+    rgba(252, 221, 221, 1) 92%
+  );
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 15px;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.playlist {
+    width: 80%;
+    flex-grow: 1;
+    border: 1px solid transparent;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #f5f2f2;
+    box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.7);
+}
+  
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.track-art {
+    margin: 25px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 2px solid #fffaff;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 6px rgb(17, 17, 17);
+    border-radius: 50%;
+}
+  
+.track-name {
+    font-size: 30px;
+    font-weight: bold;
+}
+  
+.track-artist {
+    margin-top: 5px;
+    font-size: 24px;
+    font-weight: 300;
+}
+  
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+  
+.playpause-track,
+.prev-track,
+.next-track {
+    background-color: transparent;
+    padding: 25px;
+    opacity: 0.5;
+    transition: opacity 0.4s ease;
+}
+  
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1;
+}
+  
+.slider__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seek__slider::-webkit-slider-thumb,
+.seek__slider::-moz-range-thumb,
+.volume__slider::-webkit-slider-thumb,
+.volume__slider::-moz-range-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fffaff;
+    border: 3px solid #0f49cf;
+}
+  
+.seek__slider, .volume__slider {
+    cursor: pointer;
+    appearance: none;
+    height: 5px;
+    background-color: #4286f4;
+}
+  
+.seek__slider {
+    width: 50%;
+}
+  
+.volume__slider {
+    width: 20%;
+}
+  
+.current-time,
+.total-duration,
+i.fa-volume-down {
+    padding: 8px;
+}
+  
+  
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward,
+p {
+    cursor: pointer;
+}
+
+.rotate {
+    animation: rotation 6s linear infinite;
+}
+
+/**** Animation rotation ****/
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg); 
+    }
+}
+
+.loader {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .stroke {
+    background-color: #f1f1f1;
+    height: 150%;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+    animation: animate 1.4s linear infinite;
+}
+
+/**** Animation animate ****/
+@keyframes animate {
+    0% {
+        height: 150%;
+    }
+
+    50% {
+        height: 20%;
+        background: #4286f4;
+    }
+  
+    100% {
+        background: #4286f4;
+        height: 100%;
+    }
+}
+
+.stroke:nth-child(1){
+    animation-delay: 0s;
+}
+
+.stroke:nth-child(2){
+    animation-delay: 0.3s;
+}
+
+.stroke:nth-child(3){
+    animation-delay: 0.6s;
+}
+
+.stroke:nth-child(4){
+    animation-delay: 0.9s;
+}
+
+.stroke:nth-child(5){
+    animation-delay: 0.6s;
+}
+
+.stroke:nth-child(6){
+    animation-delay: 0.3s;
+}
+
+.stroke:nth-child(7){
+    animation-delay: 0s;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 15px;
+}
+
+footer span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/**** Responsive design ****/
+
+@media screen and (max-width: 475px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .playlist {
+        overflow: hidden;
+    }
+
+    .track-art {
+        width: 245px;
+        height: 245px;
+        box-shadow: 0 3px 3px rgb(17, 17, 17);
+    }
+
+    .track-name {
+        font-size: 24px;
+        text-align: center;
+        padding: 0 12px;
+    }
+
+    .track-artist {
+        font-size: 20px;
+    }
+
+    .seek__slider {
+        width: 100%;
+    }
+      
+    .volume__slider {
+        width: 30%;
+    }
+
+    .loader {
+        height: 55px;
+    }
+
+    .loader .stroke {
+        width: 8px;
+    }
+
+}
