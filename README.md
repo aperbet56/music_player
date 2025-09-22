@@ -1,4 +1,8 @@
-## LECTEUR DE MUSIQUE
+## LECTEUR DE MUSIQUE 🎶
+
+![Design preview for the project](./img/preview.png)
+
+![Design preview for the project](./img/preview-1.png)
 
 ## Le challenge
 
@@ -16,7 +20,7 @@ Ce site va permettre d'écouter de la musique dossier de musique. Ce projet pré
 
 Lien vers le projet : https://aperbet56.github.io/music_player/
 
-## Développez avec
+## Projet développé avec
 
 - Utilisations des balises sémantiques HTML5
 - CSS3
